@@ -1,18 +1,28 @@
 @import "tailwindcss";
 
 @theme {
-  --color-primary: #00ff00;
-  --color-primary-dark: #00cc00;
+  --color-primary: var(--app-primary);
+  --color-primary-dark: var(--app-primary-dark);
   --color-background: #0d0d0d;
   --color-surface: #1a1a1a;
-  
+
   --font-mono: 'Courier New', Courier, monospace;
 }
 
 :root {
+  /* Default Green Theme */
+  --app-primary: #00ff00;
+  --app-primary-dark: #00cc00;
+
   font-family: var(--font-mono);
   background-color: var(--color-background);
   color: var(--color-primary);
+}
+
+:root[data-theme="amber"] {
+  /* Amber Theme */
+  --app-primary: #FFB000;
+  --app-primary-dark: #CC8D00;
 }
 
 body {

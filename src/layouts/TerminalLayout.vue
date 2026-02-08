@@ -13,12 +13,20 @@
         <span class="text-3xl">≡</span>
       </button>
 
-      <nav class="hidden md:flex gap-6">
-        <RouterLink to="/" class="hover:underline hover:text-white transition-colors">ROOT</RouterLink>
-        <RouterLink to="/login" class="hover:underline hover:text-white transition-colors">LOGIN</RouterLink>
-        <a href="#" class="hover:underline hover:text-white transition-colors">SYSTEM</a>
-        <a href="#" class="hover:underline hover:text-white transition-colors">LOGS</a>
-      </nav>
+      <div class="hidden md:flex items-center gap-6">
+        <nav class="flex gap-6">
+          <RouterLink to="/" class="hover:underline hover:text-white transition-colors">ROOT</RouterLink>
+          <RouterLink to="/login" class="hover:underline hover:text-white transition-colors">LOGIN</RouterLink>
+          <a href="#" class="hover:underline hover:text-white transition-colors">SYSTEM</a>
+        </nav>
+        
+        <button 
+          @click="toggleTheme" 
+          class="border border-[var(--color-primary)] px-2 py-1 text-xs hover:bg-[var(--color-primary)] hover:text-black transition-colors"
+        >
+          {{ currentTheme === 'green' ? 'AMBER_MODE' : 'GREEN_MODE' }}
+        </button>
+      </div>
     </header>
 
     <!-- Main Content -->
@@ -28,7 +36,30 @@
 
     <!-- Footer -->
     <footer class="p-4 border-t border-[var(--color-primary)] text-center text-xs opacity-50">
-      <p>SYSTEM STATUS: ONLINE | V.1.0.0</p>
+      <p>SYSTEM STATUS: ONLINE | V.1.0.0 | THEME: {{ currentTheme.toUpperCase() }}</p>
     </footer>
   </div>
 </template>
+
+<script setup>
+import { ref, onMounted } from 'vue'
+
+const currentTheme = ref('green')
+
+const toggleTheme = () => {
+  if (currentTheme.value === 'green') {
+    currentTheme.value = 'amber'
+    document.documentElement.setAttribute('data-theme', 'amber')
+  } else {
+    currentTheme.value = 'green'
+    document.documentElement.removeAttribute('data-theme')
+  }
+}
+
+onMounted(() => {
+  // Check if theme was previously set (optional, simplistic approach)
+  if (document.documentElement.getAttribute('data-theme') === 'amber') {
+    currentTheme.value = 'amber'
+  }
+})
+</script>
