@@ -1,0 +1,50 @@
+[
+    {
+        "id": 1,
+        "title": "Numb",
+        "artist": "Linkin Park",
+        "genre": "Rock",
+        "cover": "https://upload.wikimedia.org/wikipedia/en/b/b9/Linkin_Park_-_Numb_CD_cover.jpg",
+        "youtubeId": "kXYiU_JCYtU"
+    },
+    {
+        "id": 2,
+        "title": "Master of Puppets",
+        "artist": "Metallica",
+        "genre": "Metal",
+        "cover": "https://upload.wikimedia.org/wikipedia/en/b/b2/Metallica_-_Master_of_Puppets_cover.jpg",
+        "youtubeId": "xnKhsTXoKCI"
+    },
+    {
+        "id": 3,
+        "title": "Bad Romance",
+        "artist": "Lady Gaga",
+        "genre": "Pop",
+        "cover": "https://upload.wikimedia.org/wikipedia/en/c/cc/Lady_Gaga_-_Bad_Romance.png",
+        "youtubeId": "qrO4YZeyl0I"
+    },
+    {
+        "id": 4,
+        "title": "Smells Like Teen Spirit",
+        "artist": "Nirvana",
+        "genre": "Rock",
+        "cover": "https://upload.wikimedia.org/wikipedia/en/3/3c/Smells_Like_Teen_Spirit.jpg",
+        "youtubeId": "hTWKbfoikeg"
+    },
+    {
+        "id": 5,
+        "title": "Duality",
+        "artist": "Slipknot",
+        "genre": "Metal",
+        "cover": "https://upload.wikimedia.org/wikipedia/en/a/a6/Slipknot_-_Duality_CD_cover.jpg",
+        "youtubeId": "6fVE8kSM43I"
+    },
+    {
+        "id": 6,
+        "title": "Thriller",
+        "artist": "Michael Jackson",
+        "genre": "Pop",
+        "cover": "https://upload.wikimedia.org/wikipedia/en/5/55/Michael_Jackson_-_Thriller.png",
+        "youtubeId": "sOnqjkJTMaA"
+    }
+]
