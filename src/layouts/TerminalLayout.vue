@@ -15,9 +15,7 @@
 
       <div class="hidden md:flex items-center gap-6">
         <nav class="flex gap-6">
-          <RouterLink to="/" class="hover:underline hover:text-white transition-colors">ROOT</RouterLink>
           <RouterLink to="/login" class="hover:underline hover:text-white transition-colors">LOGIN</RouterLink>
-          <a href="#" class="hover:underline hover:text-white transition-colors">SYSTEM</a>
         </nav>
         
         <button 
